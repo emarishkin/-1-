@@ -391,10 +391,443 @@ export default function App(){
 
 // [1, 2, 3, 4, 5, 6]
 
-let arr1 = [1, 2, 3];
-let arr2 = [4, 5, 6];
-let res = arr1.concat(arr2)
-console.log(res);
+// let arr1 = [1, 2, 3];
+// let arr2 = [4, 5, 6];
+// let res = arr1.concat(arr2)
+// console.log(res);
+
+
+// Дана некоторая строка. Найдите позицию первого нуля в строке.
+
+// const str = '1012345'
+// console.log(str[0])
+// console.log(str.indexOf('0'))
+
+// Выведите в консоль все числа в промежутке от 1 до 1000, сумма первой и второй цифры которых равна пяти.?
+
+// const result = []
+
+// for(let i =10;i<=1000;i++){
+//   const q=i.toString()
+//   if(Number(q[0])+Number(q[1])===5){
+//     result.push(Number(q))
+//   }
+// }
+// let sum = 0
+// for(let j =0;j<result.length;j++){
+//    sum += result[j]
+// }
+// console.log(sum)
+
+
+// const result = [];
+
+// for (let i = 10; i <= 1000; i++) {
+//   const str = i.toString();
+//   if (Number(str[0]) + Number(str[1]) === 5) {
+//     result.push(i);
+//   }
+// }
+
+// const sum = result.reduce((acc, num) => acc + num, 0);
+// console.log(sum); // 3880
+
+// // Дан массив. Удалите из него элементы с заданным значением.
+
+// const arr = [2,4,4,3,6]
+
+// let removeItem = 2
+
+// const newqq = arr.filter(item=>item!=removeItem)
+// console.log(newqq)
+
+
+
+// Дан некоторый массив, например, вот такой[1, 2, 3, 4, 5, 6] Найдите сумму первой половины элементов этого массива.
+
+// const arr = [1, 2, 3, 4, 5, 6]
+// let middle = Math.floor(arr.length/2)
+// let sum = 0
+// for(let i=0;i<middle;i++){
+//   sum+=arr[i]
+// }
+// console.log(sum)
+
+
+// Дан некоторый массив, например, вот такой:
+
+// [1, 2, 3, 4, 5, 6]
+// Найдите сумму первой половины элементов этого массива.
+
+// const arr = [1, 2, 3, 4, 5, 6]
+// let polovina = Math.floor(arr.length/2)
+// let sum = 0
+// for (let i=0;i<polovina;i++){
+//   sum +=arr[i]
+// }
+// console.log(sum)
+
+
+// // Дан массив с числами. Подсчитайте количество отрицательных чисел в этом массиве.
+
+// const arr = [1,1,2,2,3,-2,0,-11]
+// let newArr = []
+// arr.filter(item=>item<0?newArr.push(item):'')
+// console.log(newArr)
+// console.log(newArr.length)
+
+
+// // Дан массив с числами. Оставьте в нем только положительные числа.
+
+// const arr =  [1,1,2,2,3,-2,0,-11]
+
+// const newArr = arr.filter(item=>item>0)
+// console.log(newArr)
+
+
+// // Дана строка. Удалите предпоследний символ из этой строки.
+
+// const str = 'qwerty'
+
+// const newStr = str.split('')
+// const remove = newStr.splice(-2,1)
+// console.log(remove)
+// console.log(newStr)
+// newStr.join()
+// console.log(newStr)
+
+
+
+// Дан некоторый массив, например, вот такой:
+
+// [1, 2, 3, 4, 5, 6]
+// Поделите сумму первой половины элементов этого массива на сумму второй половины элементов.
+
+// const arr = [1, 2, 3, 4, 5, 6 , 2]
+
+// let middle = Math.floor(arr.length/2)
+
+// let first = 0
+// let second = 0
+// for(let i=0;i<middle;i++){
+//   first +=arr[i] 
+// }
+// for(let j=middle;j<arr.length;j++){
+//   second +=arr[j] 
+// }
+// let sum = first/second
+// console.log(sum)
+
+
+
+// const arr = [1, 2, 3, 4, 5, 6]
+
+// const first = arr.slice(0,3).reduce((sum,a)=>sum+a,0)
+// const second = arr.slice(3).reduce((sum,a)=>sum+a,0)
+
+// let sum = first/second
+// console.log(sum)
+
+
+// Даны два слова. Проверьте, что последняя буква первого слова совпадает с первой буквой второго слова.
+
+// const str1 = 'Марик'
+// const str2 = 'Комарик'
+
+// const newStr1 = str1.toLowerCase().slice(-1)
+// const newStr2 = str2.toLowerCase().charAt(0)
+
+// let q = false
+// if(newStr1===newStr2){
+//    q = true
+  
+// }
+// console.log(q )
+
+
+// Дана некоторая строка. Найдите позицию третьего нуля в строке.
+
+// const str = '1304055505500'
+
+// const arr = str.split('')
+
+// let count = 0
+// for(let i=0;i<arr.length;i++){
+//  if(arr[i]==='0'){
+//   count++
+//    if(count===3){
+//     console.log(i)
+//     break
+//    }
+//  }
+// }
+
+
+
+// // Даны числа, разделенные запятыми:'12,34,56'Найдите сумму этих чисел.
+// const str = '12,34,56'
+// const arr = str.split(',').map(Number).reduce((sum,a)=>sum+a,0)
+// console.log(arr)
+// // 12+34+56=102
+
+
+// const first = Number(str.slice(0,2))
+// const second = Number(str.slice(3,5))
+// const third = Number(str.slice(6))
+// const res = first+second+third
+// console.log(res)
+
+// Дана дата в следующем формате:
+
+// '2025-12-31'
+// Преобразуйте эту дату в следующий объект:
+
+// {
+// 	year: '2025',
+// 	month: '12',
+// 	day: '31',
+// }
+
+
+// const str =  '2025-12-31'
+
+// const arr = str.split('-')
+
+// const obj = {
+//   year:arr[0],
+//   month:arr[1],
+//   day:arr[2]
+// }
+
+
+// console.log(obj)
+
+
+// // Дана некоторая строка с буквами и цифрами. Получите позицию первой цифры в этой строке.
+
+// const str = 'fff1h2g312g31g4'
+
+// const arr = str.split('')
+
+// for (let i=0;i<arr.length;i++){
+//   if(parseInt(arr[i])){
+//     console.log(i)
+//     break
+//   }
+// }
+
+
+// // Дан объект с ключами и значениями. Запишите в первый массив ключи объекта, а во второй - значения.
+
+
+// const obj = {
+//   key1:'value1',
+//   key2:'value2',
+//   key3:'value3',
+//   key4:'value4',
+// }
+
+// const keys = Object.keys(obj)
+// const values = Object.values(obj)
+
+
+// console.log(keys)
+// console.log(values)
+// .map(Number).reduce((sum,a)=>sum+a,0)
+
+// Дано число. Выведите в консоль количество четных цифр в этом числе.
+
+  // const num = 123123148
+  // const str = num.toString().split('').filter(item=>item%2===0)
+  // console.log(str.length)
+
+
+// Дана некоторая строка:
+
+// 'abcde'
+// Переведите в верхний регистр все нечетные буквы этой строки. В нашем случае должно получится следующее:
+
+// 'AbCdE'
+
+
+// const str = 'abcde'
+
+// const result = str.split('')
+
+// for (let i=0;i<result.length;i++){
+//   if(i%2===0){
+//     result[i] = result[i].toUpperCase()
+    
+//   }
+// }
+// console.log(result)
+
+
+
+
+// Дана некоторая строка со словами:
+
+// 'aaa bbb ccc'
+// Сделайте заглавным первый символ каждого слова в этой строке. В нашем случае должно получится следующее:
+
+// 'Aaa Bbb Ccc'
+
+
+
+// const res = str.split(' ')
+
+// for (let i=0;i<res.length;i++){
+// res[i]=res[i].charAt(0).toUpperCase()+ res[i].slice(1);
+// }
+// const result = res.join(' ')
+
+// console.log(result)
+
+
+
+// const str = 'aaa bbb ccc'
+
+// const result = str.split(' ').map(item=>item.charAt(0).toUpperCase()+ item.slice(1))
+// console.log(result)
+
+
+
+// // Дана некоторая строка, например, вот такая:
+
+// // '023m0df0dfg0'
+// // Получите массив позиций всех нулей в этой в строке.
+
+// const str = '023m0df0dfg0'
+
+// const res = []
+
+// for (let i=0;i<str.length;i++){
+//   if(str[i]==='0'){
+//     res.push(i)
+//   }
+// }
+// console.log(res)
+
+
+// // Дана некоторая строка:
+
+// // 'abcdefg'
+// // Удалите из этой строки каждый третий символ. В нашем случае должно получится следующее:
+
+// // 'abdeg'
+
+// const str = 'abcdefg'
+// let res =''
+// const result = str.split('').filter((_,index)=>(index+1)%3!==0).join('')
+
+// // for (let i=0;i<str.length;i++){
+// //   if((i+1)%3!==0){
+// //    res+=str[i]
+// //   }
+// // }
+
+// console.log(result)
+
+
+// Дан некоторый массив, например, вот такой:
+
+// [1, 2, 3, 4, 5, 6]
+// Поделите сумму элементов, стоящих на четных позициях, на сумму элементов, стоящих на нечетных позициях.
+
+// const arr = [1, 2, 3, 4, 5, 6]
+
+// const arr1 = arr.filter((_,index)=>index%2==0).reduce((sum,el)=>sum+el,0)
+// const arr2 = arr.filter((_,index)=>index%2==1).reduce((sum,el)=>sum+el,0)
+
+
+
+// const res = arr2/arr1
+// console.log(res)
+
+
+
+// // Дана некоторая строка с буквами и цифрами. Получите массив позиций всех цифр из этой строки.
+
+// const str = 'u1igb1yh23g1y2312'
+// const res = []
+
+// for(let i=0;i<str.length;i++){
+//   if(parseInt(str[i])){
+//     res.push(i)
+//   }
+// }
+
+// console.log(res)
+
+
+
+
+// // Дан массив с некоторыми числами, например, вот такой:
+
+// // [123, 456, 789]
+// // Напишите код, который перевернет числа в этом массиве по следующему принципу:
+
+// // [321, 654, 987]
+
+
+// const arr =  [123, 456, 789]
+
+// const res = arr.map(item=>Number(item.toString().split('').reverse().join('')))
+// console.log(res)
+
+
+
+// Дана некоторая строка с числом:
+
+// '1234567'
+// Отделите тройки цифр пробелами, начиная с конца числа. В нашем случае должно получится следующее:
+
+// '1 234 567'
+
+
+// const str = '1234567'
+// let result = ''
+// let count = 0
+// for (let i=str.length-1;i>=0;i--){
+//   result= str[i] +result
+//   count++
+//   if(count%3===0  ){
+//     result = ' ' +result
+//   }
+// }
+// console.log(result); 
+
+
+// // Дана некоторая строка:
+
+// // 'AbCdE'
+// // Смените регистр букв этой строки на противоположный. В нашем случае должно получится следующее:
+
+// // 'aBcDe'
+
+
+// const str = 'AbCdE'
+// const result = str.split('').map(item=>item===  item.toUpperCase()?item.toLowerCase():item.toUpperCase()).join('')
+
+// console.log(result);
+
+
+
+// Дана некоторая строка со словами:
+
+// 'aaa bbb ccc eee fff'
+// Сделайте заглавным первый символ каждого второго слова в этой строке. В нашем случае должно получится следующее:
+
+// 'aaa Bbb ccc Eee fff'
+
+
+
+
+const str = 'aaa bbb ccc eee fff'
+
+const result = str.split(' ').map((e,index)=>(index+1)%2===0?e.charAt(0).toUpperCase()+str.slice(1,3):e).join(' ')
+
+console.log(result);
 
 
 
