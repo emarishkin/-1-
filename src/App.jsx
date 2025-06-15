@@ -998,17 +998,87 @@ export default function App(){
 
 
 
-// Дан массив с числами:
-// [1, 2, 3, 3, 4, 5]
-// Проверьте, что в этом массиве есть два одинаковых элемента подряд.
+// // Дан массив с числами:
+// // [1, 2, 3, 3, 4, 5]
+// // Проверьте, что в этом массиве есть два одинаковых элемента подряд.
 
-const arr = [1, 2, 3, 3, 4, 5]
+// const arr = [1, 2, 3, 3, 4, 5]
 
-for(let i=0;i<arr.length;i++){
-  if(arr[i]===arr[i+1]){
-    console.log(arr[i])
-  }
-}
+// for(let i=0;i<arr.length;i++){
+//   if(arr[i]===arr[i+1]){
+//     console.log(arr[i])
+//   }
+// }
+
+
+
+
+// // Дано некоторое число. Проверьте, что цифры этого числа расположены по возрастанию.
+
+// const num = 123456
+
+// const str = num.toString()
+// let isTrue = true
+// for(let i=0;i<str.length;i++){
+//   if(str[i]>str[i+1]){
+//     isTrue = false
+//   } 
+// }
+// console.log(isTrue?'норм':'не норм')
+
+
+
+// Дан массив:
+// [1, '', 2, 3, '', 5]
+// Удалите из массива все пустые строки.
+
+
+// const arr = [1, '', 2, 3, '', 5]
+// const res = arr.filter(item=>item!=='')
+
+// console.log(res)
+
+
+
+
+
+// // Дан массив:
+
+// // [
+// // 	[2, 1, 4, 3, 5],
+// // 	[3, 5, 2, 4, 1],
+// // 	[4, 3, 1, 5, 2],
+// // ]
+// // Отсортируйте элементы в каждом подмассиве.
+
+
+// const arr = [
+// 	[2, 1, 4, 3, 5],
+// 	[3, 5, 2, 4, 1],
+// 	[4, 3, 1, 5, 2],
+// ]
+
+// const res = arr.map(item=>item.sort((a,b)=>a-b))
+// console.log(res)
+
+
+
+// Даны два массива:
+// let arr1 = [1, 2, 3];
+// let arr2 = [1, 2, 3, 4, 5];
+// Удалите из большего массива лишние элементы с конца так, чтобы длины массивов стали одинаковыми.
+
+
+// let arr1 = [1, 2, 3];
+// let arr2 = [1, 2, 3, 4, 5];
+
+// const minLenght = Math.min(arr1.length,arr2.length)
+
+// const newArr1 = arr1.slice(0,minLenght)
+// const newArr2 = arr2.slice(0,minLenght)
+
+//  console.log(newArr1)
+//  console.log(newArr2)
 
 
 
