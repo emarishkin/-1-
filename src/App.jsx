@@ -823,11 +823,116 @@ export default function App(){
 
 
 
-const str = 'aaa bbb ccc eee fff'
+// const str = 'aaa bbb ccc eee fff'
 
-const result = str.split(' ').map((e,index)=>(index+1)%2===0?e.charAt(0).toUpperCase()+str.slice(1,3):e).join(' ')
+// const result = str.split(' ').map((e,index)=>(index+1)%2===0?e.charAt(0).toUpperCase()+str.slice(1,3):e).join(' ')
 
-console.log(result);
+// console.log(result);
+
+
+
+
+// Дана некоторая строка:
+// 'a bc def ghij'
+// Переведите в верхний регистр все подстроки, в которых количество букв меньше или равно трем. В нашем случае должно получится следующее:
+// 'A BC DEF ghij'
+
+// const str = 'a bc def ghij'
+// let result = str.split(' ')
+// let res = []
+// for(let i=0;i<result.length;i++){
+//   if(result[i].length<=3){
+//     res.push(result[i].toUpperCase())
+//   }else{
+//     res.push(result[i])
+//   }
+// }
+// console.log(res);
+
+
+
+//  const str = 'a bc def ghij'
+//  const res = str.split(' ').map(item=>item.length<=3?item.toUpperCase():item).join(' ')
+//  console.log(res);
+
+
+
+// // Дан символ. Узнайте, в каком регистре этот символ - в верхнем или нижнем.
+
+// const str = 'вЫ'
+
+// const res = str.split('').map(item=>item===item.toUpperCase()?'верхний регистр':'нижний регистр')
+// console.log(res);
+
+
+
+// // Дано некоторое число, например, такое:
+
+// // 123789
+// // Удалите из этого числа все нечетные цифры. В нашем случае получится такой результат:
+
+// // 28
+
+// const num = 123789
+// const res = num.toString().split('').filter(item=>item%2===0).map(Number).join('')
+// console.log(res);
+
+
+
+
+
+// Дана строка с буквами. Проверьте, что в этой строке не более двух заглавных букв.
+
+// const str = 'jdEjfdjkk'
+// let count = 0
+
+// for(let i=0;i<str.length;i++){
+//   if(str[i]===str[i].toUpperCase() && str[i]!==str[i].toLowerCase()){
+//     count++
+//     if(count>2)break
+//   }
+// }
+// console.log(count<=2?'норм':'не норм');
+
+
+// const str = 'jdEEEjfdjkk'
+// const res = str.split('').filter(item=>item===item.toUpperCase())
+// console.log(res.length<=2?'норм':'не норм');
+
+
+
+
+// Дана некоторая строка:
+
+// '1 22 333 4444 22 5555 1'
+// Удалите из этой строки все подстроки, в которых количество символов больше трех. В нашем случае должно получится следующее:
+
+// '1 22 333 22 1'
+
+
+// const str = '1 22 333 4444 22 5555 1'
+// const res = str.split(' ').filter(item=>item.length<4).join(' ')
+// console.log(res);
+
+
+
+
+// // Даны два массива:
+// // let arr1 = [1, 2, 3];
+// // let arr2 = ['a', 'b', 'c'];
+// // Слейте эти массивы в новый массив следующим образом:
+// // [1, 2, 'a', 'b', 'c', 3]
+
+// let arr1 = [1, 2, 3];
+// let arr2 = ['a', 'b', 'c'];
+
+// const res = [...arr1.slice(0,2),...arr2,...arr1.slice(2)]
+
+// console.log(res);
+
+
+
+
 
 
 
