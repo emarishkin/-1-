@@ -930,11 +930,85 @@ export default function App(){
 
 // console.log(res);
 
+ 
+
+
+// // Дано некоторое число:
+// // 123456
+// // Найдите сумму пар цифр этого числа. В нашем случае имеется ввиду следующее:
+// // 12 + 34 + 56
+
+
+// const num = 123456
+
+// const res = num.toString()
+// let sum = 0
+// for(let i=0;i<res.length;i+=2){
+//   let para = res.slice(i,i+2)
+//   sum += parseInt(para, 10);
+//   console.log(para)  
+// }
+
+// console.log(sum);
+
+
+// // Дан массив с числами:
+
+// // [1, 2, 3, 4, 5]
+// // Выведите в консоль элементы этого массива в обратном порядке.
+
+
+// const arr = [1, 2, 3, 4, 5]
+
+// const res = arr.reverse()
+// console.log(res);
+
+
+// // Дана строка с буквами и цифрами. Проверьте, что в этой строке не более трех букв.
+
+// const str = 'bSS3423gb2'
+// const res = str.split('').filter(item=>/[a-z,A-Z]/.test(item)).length
+// console.log(res<=3?'норм':'не норм')
 
 
 
+// // Дано число. Получите первую четную цифру с конца этого числа.
 
 
+// const num = 822392389
+
+// const str = num.toString()
+
+// for(let i=str.length-1;i>=0;i--){
+//   if(str[i]%2===0){
+//     console.log(Number(str[i]))
+//     break
+//   }
+// }
+
+
+// // Дана некоторая строка:
+// // 'abcde abcde abcde'
+// // Замените в ней первый символ каждого слова на '!':
+// // '!bcde !bcde !bcde'
+
+// const str = 'abcde abcde abcde'
+// const res = str.split(' ').map(item=>'!'+item.slice(1)).join(' ')
+// console.log(res);
+
+
+
+// Дан массив с числами:
+// [1, 2, 3, 3, 4, 5]
+// Проверьте, что в этом массиве есть два одинаковых элемента подряд.
+
+const arr = [1, 2, 3, 3, 4, 5]
+
+for(let i=0;i<arr.length;i++){
+  if(arr[i]===arr[i+1]){
+    console.log(arr[i])
+  }
+}
 
 
 
