@@ -1083,6 +1083,131 @@ export default function App(){
 
 
 
+// Выведите в консоль все числа в промежутке от 10 до 1000, у которых предпоследняя цифра четная.
+// for(let i=10;i<1001;i++){
+//   if(i.toString().at(-2)%2===0){
+//     console.log(i)
+//   }
+// }
+
+
+
+// // Дан массив. Удалите из него каждый пятый элемент.
+// // const res = arr.filter((_,index)=>(index+1)%5!==0)
+
+// const arr = ['e','e','r','t','b','s','v','w','s','v','w']
+// let newArr = []
+// for(let i=0;i<arr.length;i++){
+//   if((i+1)%5!==0){
+//    newArr.push(arr[i])
+//   }
+// }
+// console.log(newArr)
+
+
+// // Дана некоторая переменная с числом:
+// // let num = 5;
+// // Сделайте строку, содержащую столько нулей, сколько указано в переменной. В нашем случае получится такая строка:
+// // '00000'
+
+// let num = 7 
+// let str = ''
+// for(let i=0;i<num;i++){
+//   str+='0'
+// }
+// console.log(str)
+
+
+
+// // Дана некоторая строка со словами:
+// // 'aaa bbb ccc eee fff'
+// // Удалите из этой строки каждое второе слово. В нашем случае должно получится следующее:
+// // 'aaa ccc fff'
+
+// const str = 'aaa bbb ccc eee fff'
+// const res = str.split(' ').reduce((acc,item,index)=>{
+//   if((index+1)%2!==0) acc.push(item)
+//     return acc
+// },[])
+// console.log(res)
+
+
+// const str = 'aaa bbb ccc eee fff'
+// const res = str.split(' ').filter((_,index)=>(index+1)%2!==0)
+// console.log(res)
+
+
+
+// // Дан массив:
+// // [
+// // 	[1, 2, 3],
+// // 	[4, 5, 6],
+// // 	[7, 8, 9],
+// // ]
+// // Найдите сумму элементов этого массива.
+
+// const arr = [
+// 	[1, 2, 3],
+// 	[4, 5, 6],
+// 	[7, 8, 9],
+// ]
+
+// const res = arr.reduce((sum,a)=>sum+a.reduce((sumArr,b)=>sumArr+b,0),0)
+// console.log(res)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
