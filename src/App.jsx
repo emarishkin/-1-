@@ -1280,33 +1280,143 @@ export default function App(){
 
 
 
-let obj = {
-  1: {
-    1: 11,
-    2: 12,
-    3: 13,
-  },
-  2: {
-    1: 21,
-    2: 22,
-    3: 23,
-  },
-  3: {
-    1: 24,
-    2: 25,
-    3: 26,
-  },
-};
+// let obj = {
+//   1: {
+//     1: 11,
+//     2: 12,
+//     3: 13,
+//   },
+//   2: {
+//     1: 21,
+//     2: 22,
+//     3: 23,
+//   },
+//   3: {
+//     1: 24,
+//     2: 25,
+//     3: 26,
+//   },
+// };
 
-let sum = 0;
+// let sum = 0;
 
-for (let key1 in obj){
-  const innerObj = obj[key1]
-  for (let key2 in innerObj){
-    sum+=innerObj[key2]
-  }
-}
-console.log(sum)
+// for (let key1 in obj){
+//   const innerObj = obj[key1]
+//   for (let key2 in innerObj){
+//     sum+=innerObj[key2]
+//   }
+// }
+// console.log(sum)
+
+
+// Дан текст со словами. Запишите в массив все слова, начинающиеся на букву 'a'.
+
+// const str = 'qwweqwe rgerger aefe wefwef aefefe'
+// const words = str.split(' ')
+// const arr = []
+
+// for(let i=0;i<words.length;i++){
+// if(words[i].charAt(0)==='a'){
+//   arr.push(words[i])
+// }
+// }
+// console.log(arr)
+
+// const str = 'qwweqwe rgerger aefe wefwef aefefe'
+
+// const res = str.split(' ').filter(item=>item.charAt()==='a')
+// console.log(res)
+
+
+
+// Дан массив с числами. Оставьте в нем только те числа, которые делятся на 5.
+
+// const arr = [4,54,3,4,34,53,453,55]
+
+// const res = arr.filter(item=>item%5===0)
+// console.log(res)
+
+
+// const arr = [4,54,3,4,34,53,453,55]
+// let newArr = []
+// for(let i=0;i<arr.length;i++){
+//   if(arr[i]%5===0){
+//     newArr.push(arr[i])
+//   }
+// }
+// console.log(newArr)
+
+
+// const arr = [4,54,3,4,34,53,453,55,5,125]
+
+// const res = arr.reduce((acc,item)=>{
+//   if(item%5===0){
+//     return acc+item
+//   }
+//   return acc
+// },0)
+// console.log(res)
+
+
+
+// Дан массив с числами. Оставьте в нем только те числа, которые содержат цифру ноль.
+
+// const res = arr.reduce((acc,item)=>{
+//   if(item.toString().includes('0')){
+//     acc.push(item)
+//   }
+//   return acc
+// },[])
+// console.log(res)
+
+
+// const arr = [4,504,3,4,304,53,4503,55,5,125]
+// const res = arr.filter((item)=>item.toString().includes('0'))
+// console.log(res)
+
+
+
+// // Дан массив со числами. Проверьте, что в нем есть число, содержащее в себе цифру 3.
+
+// const arr = [4,504,3,4,304,53,4503,55,5,125]
+// const res = arr.filter(item=>item.toString().includes('3'))
+// console.log(res)
+
+// const arr = [4,504,3,4,304,53,4503,55,5,125]
+// const res = arr.reduce((acc,item)=>{
+//   if(item.toString().includes('3')){
+//     acc.push(item)
+//   }
+//   return acc
+// },[])
+// console.log(res)
+
+
+
+
+// Дано некоторое число:
+
+// 35142
+// Отсортируйте цифры этого числа. В нашем случае должно получится следующее:
+
+// 12345
+
+// const num = 35142
+// const res = num.toString().split('').sort().map(Number).join('')
+// console.log(res)
+
+
+
+// Напишите программу, которая сформирует следующую строку:
+// '-1-2-3-4-5-'
+
+
+const arr = [1,2,3,4,5]
+const res = '-'+arr.join('-')+'-'
+console.log(res)
+
+
+
 
 
 
