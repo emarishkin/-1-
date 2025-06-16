@@ -1205,9 +1205,28 @@ export default function App(){
 // console.log(res?'да':'нет')
 
 
-// Дан массив:
+// // Дан массив:
 
-// [
+// // [
+// // 	[
+// // 		[11, 12, 13],
+// // 		[14, 15, 16],
+// // 		[17, 17, 19],
+// // 	],
+// // 	[
+// // 		[21, 22, 23],
+// // 		[24, 25, 26],
+// // 		[27, 27, 29],
+// // 	],
+// // 	[
+// // 		[31, 32, 33],
+// // 		[34, 35, 36],
+// // 		[37, 37, 39],
+// // 	],
+// // ]
+// // Найдите сумму элементов этого массива.
+
+// const arr = [
 // 	[
 // 		[11, 12, 13],
 // 		[14, 15, 16],
@@ -1224,46 +1243,70 @@ export default function App(){
 // 		[37, 37, 39],
 // 	],
 // ]
-// Найдите сумму элементов этого массива.
 
-const arr = [
-	[
-		[11, 12, 13],
-		[14, 15, 16],
-		[17, 17, 19],
-	],
-	[
-		[21, 22, 23],
-		[24, 25, 26],
-		[27, 27, 29],
-	],
-	[
-		[31, 32, 33],
-		[34, 35, 36],
-		[37, 37, 39],
-	],
-]
-
-const res = arr.reduce((sum,a)=>sum+a.reduce((subSum,b)=>subSum+b.reduce((subSubSum,c)=>subSubSum+c,0),0),0)
-const sum = arr.flat(2).reduce((a, b) => a + b, 0);
-console.log(res)
+// const res = arr.reduce((sum,a)=>sum+a.reduce((subSum,b)=>subSum+b.reduce((subSubSum,c)=>subSubSum+c,0),0),0)
+// const sum = arr.flat(2).reduce((a, b) => a + b, 0);
+// console.log(res)
 
 
 
 
+// // Выведите в консоль все числа в промежутке от 10 до 1000, у которых первая цифра четная.
+
+// let str = ''
+// for(let i=10;i<=1000;i++){
+//   if(i.toString().charAt(0)%2===0){
+//    console.log(i)
+//   }
+// }
+
+
+// // Дан некоторый массив, например, вот такой:
+// // [1, 2, 3, 4, 5, 6]
+// // Поменяйте местами пары элементов этого массива:
+// // [2, 1, 4, 3, 6, 5]
+
+
+// const arr = [1, 2, 3, 4, 5, 6]
+
+// const newArr = []
+
+// for(let i=0;i<arr.length;i+=2){
+//   if(i+1<arr.length){
+//     newArr.push(arr[i+1],arr[i])
+//   }
+// }
+// console.log(newArr)
 
 
 
+let obj = {
+  1: {
+    1: 11,
+    2: 12,
+    3: 13,
+  },
+  2: {
+    1: 21,
+    2: 22,
+    3: 23,
+  },
+  3: {
+    1: 24,
+    2: 25,
+    3: 26,
+  },
+};
 
+let sum = 0;
 
-
-
-
-
-
-
-
-
+for (let key1 in obj){
+  const innerObj = obj[key1]
+  for (let key2 in innerObj){
+    sum+=innerObj[key2]
+  }
+}
+console.log(sum)
 
 
 
