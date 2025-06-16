@@ -1157,28 +1157,96 @@ export default function App(){
 
 
 
+// // Дан массив со словами. Удалите из него слова, состоящие более чем из трех символов.
+
+// const arr = ['efwef','wefwefw','efwefwef','ee','ddd']
+// const res = arr.filter(item=>item.length<4)
+// console.log(res)
+
+  //  const arr = ['efwef','wefwefw','efwefwef','ee','ddd']
+
+  //  let res = arr.reduce((acc,a)=>{
+  //   if(a.length<=3){
+  //     acc.push(a)
+  //   }
+  //   return acc
+  //  },[])
+ 
+  // console.log(res)
+
+
+
+//Дано некоторое число:
+// 1357
+// Проверьте, что все цифры этого числа являются нечетными.
+
+// const num = 1557
+
+// const res = num.toString()
+// let isChet = true
+
+// for (let i=0;i<res.length;i++){
+//   if(res[i]%2===0){
+//     isChet = false
+//   } 
+// }
+// console.log(isChet?'чет':'нечет')
 
 
 
 
+// // Дано некоторое слово:
+// // 'abcba'
+// // Проверьте, что это слово читается одинаково с любой стороны.
+
+// const str = 'abcba'
+
+// const res = str === str.split('').reverse().join('')
+// console.log(res?'да':'нет')
 
 
+// Дан массив:
 
+// [
+// 	[
+// 		[11, 12, 13],
+// 		[14, 15, 16],
+// 		[17, 17, 19],
+// 	],
+// 	[
+// 		[21, 22, 23],
+// 		[24, 25, 26],
+// 		[27, 27, 29],
+// 	],
+// 	[
+// 		[31, 32, 33],
+// 		[34, 35, 36],
+// 		[37, 37, 39],
+// 	],
+// ]
+// Найдите сумму элементов этого массива.
 
+const arr = [
+	[
+		[11, 12, 13],
+		[14, 15, 16],
+		[17, 17, 19],
+	],
+	[
+		[21, 22, 23],
+		[24, 25, 26],
+		[27, 27, 29],
+	],
+	[
+		[31, 32, 33],
+		[34, 35, 36],
+		[37, 37, 39],
+	],
+]
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+const res = arr.reduce((sum,a)=>sum+a.reduce((subSum,b)=>subSum+b.reduce((subSubSum,c)=>subSubSum+c,0),0),0)
+const sum = arr.flat(2).reduce((a, b) => a + b, 0);
+console.log(res)
 
 
 
