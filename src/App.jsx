@@ -1411,18 +1411,107 @@ export default function App(){
 // '-1-2-3-4-5-'
 
 
-const arr = [1,2,3,4,5]
-const res = '-'+arr.join('-')+'-'
-console.log(res)
+// const arr = [1,2,3,4,5]
+// const res = '-'+arr.join('-')+'-'
+// console.log(res)
+
+
+// Дан массив со числами. Удалите из него числа, состоящие более чем из трех цифр.
+
+// const arr = [13,233,3221,413223,522]
+// const res = arr.filter(item=>item.toString().length<=3)
+// console.log(res)
+
+// const arr = [13,233,3221,413223,522]
+// function dro(arr){
+//   const res = arr.reduce((acc,item)=>{
+//     if(item.toString().length<=3){
+//       acc.push(item)
+//     }
+//     return acc
+//   },[])
+//   return res
+// }
+// console.log(dro(arr))
+
+
+
+// Дано число, например, вот такое:
+// let num = 12345;
+// Проверьте, что все цифры этого числа больше нуля.
+
+
+// let num = 11345;
+
+// const res = num.toString().split('')  
+// let isTrue = true
+// for(let i=0;i<res.length;i++){
+//  if(res[i]==='0'){
+//   isTrue=false
+//  }
+// }
+// console.log(isTrue?'норм':'не норм')
 
 
 
 
+// // Дан некоторый массив, например, вот такой:
+// // [123, 456, 789]
+// // Слейте все элементы этого массива в один массив, разбив их посимвольно:
+// // [1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+// const arr = [123, 456, 789]
+
+// const res = arr.join('').split('').map(Number)
+// console.log(res)
 
 
 
+// Дан следующая структура:
 
+// let data = [
+// 	{
+// 		1: 11,
+// 		2: 12,
+// 		3: 13,
+// 	},
+// 	{
+// 		1: 21,
+// 		2: 22,
+// 		3: 23,
+// 	},
+// 	{
+// 		1: 24,
+// 		2: 25,
+// 		3: 26,
+// 	},
+// ];
+// Найдите сумму элементов этой структуры.
 
+// let data = [
+// 	{
+// 		1: 11,
+// 		2: 12,
+// 		3: 13,
+// 	},
+// 	{
+// 		1: 21,
+// 		2: 22,
+// 		3: 23,
+// 	},
+// 	{
+// 		1: 24,
+// 		2: 25,
+// 		3: 26,
+// 	},
+// ];
+// let sum = 0
+// for (let item of data){
+//   for(let subItem in item){
+//     sum+=item[subItem]   
+//   }
+// }
+// console.log(sum)
 
 
 
