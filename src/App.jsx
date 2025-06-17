@@ -1514,6 +1514,90 @@ export default function App(){
 // console.log(sum)
 
 
+// // Дана строка со словами. Отсортируйте слова в алфавитном порядке.
+
+// const str = 'wefnwfhn afjergheru rgjergjierig'
+// const res = str.split(' ').sort().join(' ')
+// console.log(res)
+
+
+// // Дано число. Получите массив делителей этого числа.
+
+// const num = 10
+
+// const res = num.toString()
+// const arr = []
+// for(let i=0;i<11;i++){
+//  if(num%i===0){
+//   arr.push(i)
+//  }
+// }
+// console.log(arr)
+
+
+
+// // Даны два числа. Получите массив общих делителей этих чисел.
+// const num1 = 25
+// const num2 = 15
+// const minSir = Math.min(num1,num2)
+// const arr = []
+// for(let i=1;i<minSir;i++){
+//   if(num1%i===0 && num2%i===0){
+//   arr.push(i)
+//   }
+// }
+// console.log(arr)
+
+
+
+// // Дано число. Проверьте, что у этого числа есть только один делитель, кроме него самого и единицы. 
+
+// const num = 44
+
+// const arr = []
+
+// for(let i=1;i<num;i++){
+//   if(num%i===0 && i!==1){
+//     arr.push(i)
+//   }
+// }
+// console.log(arr.length===1?'норм':'не норм')
+
+
+// Через запятую написаны числа. Получите максимальное из этих чисел.
+
+// const arr = [21,12,312,31,231]
+// const res = arr.sort((a,b)=>a-b).slice(-1).join('')
+// console.log(res)
+
+// const arr = [21,12,312,31,231]
+// const res = Math.max(...arr)
+// console.log(res)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
