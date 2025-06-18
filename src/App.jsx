@@ -1752,11 +1752,75 @@ export default function App(){
 // 	[1, 2, 3],
 // ]
 
-const arr =[]
-for (let i=0;i<5;i++){
-  arr.push([1,2,3])
-}
-console.log(arr)
+// const arr =[]
+// for (let i=0;i<5;i++){
+//   arr.push([1,2,3])
+// }
+// console.log(arr)
+
+
+// // Дана строка. Проверьте, что эта строка состоит только из цифр.
+
+// const str = '223'
+
+// const res = str.split('')
+// let isTrue = true
+// for(let i=0;i<res.length;i++){
+//   if(!Number(res[i])){
+//  isTrue = false
+//  break
+//   } 
+// }
+
+// console.log(isTrue?'норм':'не норм')
+
+
+
+  // // Дана строка. Проверьте, что эта строка состоит только из четных цифр.
+
+
+  // const str = '24'
+  // let isTrue = true
+  // for (let i=0;i<str.length;i++){
+  // if(str[i]%2===1){
+  //   isTrue = false
+  //   break
+  // }
+  // }
+  // console.log(isTrue?'норм':'не норм')
+
+
+
+// // Дан массив со числами. Удалите из него числа, имеющие два и более нуля.
+
+// const arr = [133, 2302, 3000]
+
+// const res = arr.filter(item=>{
+//   const str = item.toString().split('')
+//   const zeroItem = str.filter(zItem=>zItem==='0')
+//   return zeroItem.length<2
+// })
+
+// console.log(res)
+
+
+
+// // Найдите все числа от 1 до 1000, сумма цифр которых равна 13.
+
+// const arr = []
+
+// for (let i=1;i<1001;i++){
+//  const res = String(i).split('').reduce((acc,item)=>acc+Number(item),0)
+//  if(res===13){
+//   arr.push(i)
+//  }
+// }
+// console.log(arr)
+
+
+
+
+
 
 
 }
