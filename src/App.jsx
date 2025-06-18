@@ -1666,12 +1666,97 @@ export default function App(){
 
 
 
+// Дан массив со числами. Проверьте, что все числа из этого массива содержат в себе цифру 3.
+
+// const arr = [201,102,3102,301,2301,10]
+
+// let isTrue = true
+
+// for(let num of arr){
+//   if(!num.toString().includes('0')){
+//     isTrue = false
+//   }
+// }
+// console.log(isTrue ? 'все ок' : 'не ок');
 
 
 
 
 
+// // // Задача: Напишите функцию sumArray, которая принимает массив чисел и возвращает их сумму, используя метод reduce.
+// const arr = [201,102,3102,301,2301,10]
+// function sumArray(arr){
+// const res = arr.reduce((acc,item)=>acc+item,0)
+// return res
+// }
+// console.log(sumArray(arr))
 
+// // Подсчёт количества каждого элемента в массиве
+// // Задача: Напишите функцию countItems, которая принимает массив и возвращает объект,
+// //  где ключи — элементы массива, а значения — количество их вхождений.
+// function countItems(arr){
+// const result = arr.reduce((acc,item)=>{
+// acc[item] = (acc[item] || 0)+1
+// return acc
+// },{})
+// return result
+// }
+// console.log(countItems(['a', 'b', 'a', 'c', 'b', 'a'])); 
+
+
+
+
+
+// // Задача: Напишите функцию groupBy,
+// //  которая принимает массив объектов и строку (ключ объекта),
+// //  затем возвращает объект, где значения сгруппированы по этому ключу.
+// const users = [
+//   { id: 1, name: "Alice", age: 25 },
+//   { id: 2, name: "Bob", age: 30 },
+//   { id: 3, name: "Charlie", age: 25 }
+// ];
+// function groupBy(arr,key){
+//   const result = arr.reduce((acc,obj)=>{
+//     const groupKey = obj[key]
+//     if(!acc[groupKey]){
+//       acc[groupKey] = []
+//     }
+//     acc[groupKey].push(obj)
+//     return acc
+//   },{})
+//   return result
+// }
+// console.log(groupBy(users, 'age'));
+
+
+
+// // Дана строка в формате:
+
+// // 'kebab-case'
+// // Преобразуйте ее в формат:
+
+// // 'snake_case'
+
+// const str = 'kebab-case'
+// const res = str.split('-').join('_')
+// console.log(res)
+
+
+
+// Сформируйте с помощью циклов следующий массив:
+// [
+// 	[1, 2, 3],
+// 	[1, 2, 3],
+// 	[1, 2, 3],
+// 	[1, 2, 3],
+// 	[1, 2, 3],
+// ]
+
+const arr =[]
+for (let i=0;i<5;i++){
+  arr.push([1,2,3])
+}
+console.log(arr)
 
 
 }
