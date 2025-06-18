@@ -1575,25 +1575,94 @@ export default function App(){
 // console.log(res)
 
 
+// Дан массив с числами. После каждого однозначного числа вставьте еще такое же.
+
+
+// const arr = [21,12,2,2,312,31,231,1]
+// const newArr = []
+
+// for(let i=0;i<arr.length;i++){
+//   newArr.push(arr[i])
+//   if(arr[i].toString().length===1){
+//     newArr.push(arr[i]) 
+//   }
+// }
+// console.log(newArr)
+
+
+// const arr = [21,12,312,31,231,1]
+
+// const res = arr.reduce((acc,item)=>{
+//   acc.push(item)
+//   if(item.toString().length===1){
+//     acc.push(item)
+//   }
+//   return acc
+// },[])
+
+// console.log(res)
 
 
 
 
 
+// // Дана строка. Удалите из нее все гласные буквы.
+
+// const str = 'nrebfqujrbhqrinn'
+// const glas = ['a', 'e', 'i', 'o', 'u']
+
+// const res = str.split('').filter(item=>!glas.includes(item))
+
+// console.log(res)
+
+
+
+// Дана строка. Сделайте заглавной последнюю букву каждого слова в этой строке.
+
+// const str = 'nreb fquj rbhq rinn'
+
+// const res = str.split(' ').reduce((acc,item)=>{
+//   const transform = item.slice(0,-1) + item.slice(-1).toUpperCase()
+//   acc.push(transform)
+//   return acc
+// },[])
+
+// console.log(res.join(' '))
 
 
 
 
+// // Дан следующая структура:
 
+// let data = [
+// 	{
+// 		1: [1, 2, 3],
+// 		2: [1, 2, 3],
+// 		3: [1, 2, 3],
+// 	},
+// 	{
+// 		1: [1, 2, 3],
+// 		2: [1, 2, 3],
+// 		3: [1, 2, 3],
+// 	},
+// 	{
+// 		1: [1, 2, 3],
+// 		2: [1, 2, 3],
+// 		3: [1, 2, 3],
+// 	},
+// ];
+// // // Найдите сумму элементов этой структуры.
 
+// let sum = 0
+// for(let obj of data){
+//   for(let key in obj){
+//     for(let num of obj[key]){
+//         sum+=num
+//     }
+//   }
+// }
 
-
-
-
-
-
-
-
+// console.log(sum)
 
 
 
