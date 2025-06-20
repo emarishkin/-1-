@@ -285,11 +285,47 @@ export default function App(){
 
 
 
-// Объединить массив с другим массивом и дополнительными элементами
-const arr1 = [1, 2];
-const arr2 = [3, 4];
-const res = arr1.concat(arr2,5,6)
-console.log(res) 
+// // Объединить массив с другим массивом и дополнительными элементами
+// const arr1 = [1, 2];
+// const arr2 = [3, 4];
+// const res = arr1.concat(arr2,5,6)
+// console.log(res) 
+
+
+// Проверить, есть ли число 5 в массиве
+// Проверить,есть ли строка "apple" в массиве
+// Проверить наличие элемента перед его добавлением
+// Проверить, содержит ли массив хотя бы один из элементов другого массива
+// Проверить наличие элемента в массиве объектов (по простому значению)
+
+// const arr = [4,4,5,56,6,6]
+// const res = arr.includes(5)
+// console.log(res) 
+
+
+// // Проверить наличие элемента перед его добавлением
+// const arr = [4,5,56,6,6]
+// const poisk = 4
+
+// if(!arr.includes(poisk)){
+//   arr.push(poisk)
+// }
+// console.log(arr) 
+
+// // Проверить, содержит ли массив хотя бы один из элементов другого массива
+// const arr1 = [4,5,5]
+// const arr2 = [4,9,9]
+
+// const res1 = arr1.some(item=>arr2.includes(item))
+// const res2 = arr1.find(item=>arr2.includes(item))
+// const res3 = arr1.every(item=>arr2.includes(item))
+// const res4 = arr1.filter(item=>arr2.includes(item))
+// console.log(res) 
+
+
+
+
+
 
 
 
