@@ -239,23 +239,57 @@ export default function App(){
 
 
 
-const products = [
-  { id: 1, name: 'Ноутбук', price: 45000, inStock: true, category: 'electronics' },
-  { id: 2, name: 'Мышка', price: 1200, inStock: false, category: 'electronics' },
-  { id: 3, name: 'Книга', price: 500, inStock: true, category: 'books' },
-  { id: 4, name: 'Футболка', price: 800, inStock: true, category: 'clothes' },
-  { id: 5, name: 'Наушники', price: 7000, inStock: true, category: 'electronics' }
-];
+// const products = [
+//   { id: 1, name: 'Ноутбук', price: 45000, inStock: true, category: 'electronics' },
+//   { id: 2, name: 'Мышка', price: 1200, inStock: false, category: 'electronics' },
+//   { id: 3, name: 'Книга', price: 500, inStock: true, category: 'books' },
+//   { id: 4, name: 'Футболка', price: 800, inStock: true, category: 'clothes' },
+//   { id: 5, name: 'Наушники', price: 7000, inStock: true, category: 'electronics' }
+// ];
 
-const result = products
-.filter(el=>el.inStock)
-.map((product)=>({
-    ...product,
-    formattedPrice:product.price.toLocaleString('ru-RU') + ' ₽',
-    category:product.category==='electronics'?`⚡ ${product.category}`:product.category,
-    isExpensive:product.price>5000
-}))
-console.log(result) 
+// const result = products
+// .filter(el=>el.inStock)
+// .map((product)=>({
+//     ...product,
+//     formattedPrice:product.price.toLocaleString('ru-RU') + ' ₽',
+//     category:product.category==='electronics'?`⚡ ${product.category}`:product.category,
+//     isExpensive:product.price>5000
+// }))
+// console.log(result) 
+
+
+// Объединить два массива чисел
+// Добавить элемент в конец массива
+// Объединить три массива
+// Создать новый массив на основе существующего с добавлением элементов
+// Объединить массив с другим массивом и дополнительными элементами
+
+// 1,2
+// const arr1 = [1, 2];
+// const arr2 = [3, 4];
+// const res = arr1.concat(arr2)
+// res.push(1)
+// console.log(res) 
+
+// 3
+// const arr1 = [1, 2];
+// const arr2 = [3, 4];
+// const arr3 = [5, 6];
+// const res = arr1.concat(arr2,arr3)
+// console.log(res) 
+
+// // 4
+// const arr1 = [1, 2];
+// const newArr = arr1.concat([3,4])
+// console.log(newArr) 
+
+
+
+// Объединить массив с другим массивом и дополнительными элементами
+const arr1 = [1, 2];
+const arr2 = [3, 4];
+const res = arr1.concat(arr2,5,6)
+console.log(res) 
 
 
 
