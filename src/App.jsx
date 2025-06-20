@@ -324,9 +324,28 @@ export default function App(){
 
 
 
+// // Извлечь часть массива, начиная с определенного индекса до конца
+// const arr = [4,5,5,4,312,423,2,3,3,2,34,234]
+// const res = arr.slice(-2)
+// console.log(res) 
 
 
+// Напишите функцию groupBy(arr, prop), которая группирует элементы массива объектов по значению указанного свойства.
 
-
+const users = [
+  { id: 1, name: 'Alice', age: 25 },
+  { id: 2, name: 'Bob', age: 30 },
+  { id: 3, name: 'Charlie', age: 25 },
+  { id: 4, name: 'Dave', age: 30 }
+];
+function groupBy(arr, prop){
+return arr.reduce((acc,obj)=>{
+ const key = obj[prop]
+ if(!acc[key]) acc[key]=[]
+ acc[key].push(obj)
+ return acc
+},{})
+}
+console.log(groupBy(users, 'age'));
 
 }
