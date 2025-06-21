@@ -332,20 +332,211 @@ export default function App(){
 
 // Напишите функцию groupBy(arr, prop), которая группирует элементы массива объектов по значению указанного свойства.
 
-const users = [
-  { id: 1, name: 'Alice', age: 25 },
-  { id: 2, name: 'Bob', age: 30 },
-  { id: 3, name: 'Charlie', age: 25 },
-  { id: 4, name: 'Dave', age: 30 }
-];
-function groupBy(arr, prop){
-return arr.reduce((acc,obj)=>{
- const key = obj[prop]
- if(!acc[key]) acc[key]=[]
- acc[key].push(obj)
- return acc
-},{})
-}
-console.log(groupBy(users, 'age'));
+// const users = [
+//   { id: 1, name: 'Alice', age: 25 },
+//   { id: 2, name: 'Bob', age: 30 },
+//   { id: 3, name: 'Charlie', age: 25 },
+//   { id: 4, name: 'Dave', age: 30 }
+// ];
+// function groupBy(arr, prop){
+// return arr.reduce((acc,obj)=>{
+// const key = obj[prop]
+// if(!acc[key]){
+//   acc[key]=[]
+// }
+// acc[key].push(obj)
+// return acc
+// },{})
+// }
 
+// console.log(groupBy(users, 'age'));
+
+
+// // Получить массив имен только активных пользователей (isActive: true),
+// //  отсортированных по возрасту (от меньшего к большему).
+// const users = [
+//   { id: 1, name: "Alice", age: 25, isActive: true },
+//   { id: 2, name: "Bob", age: 30, isActive: false },
+//   { id: 3, name: "Charlie", age: 22, isActive: true },
+//   { id: 4, name: "David", age: 28, isActive: false },
+// ];
+// const res = [...users].filter(user=>user.isActive).sort((a,b)=>a.age-b.age).map(el=>el.name)
+// console.log(res) 
+
+
+
+
+// // Найти общую стоимость всех заказов (price * quantity).
+// // Получить массив продуктов, у которых цена больше 100.
+// // Ожидаемый результат:
+// const orders = [
+//   { id: 1, product: "Laptop", price: 1000, quantity: 2 },
+//   { id: 2, product: "Mouse", price: 20, quantity: 5 },
+//   { id: 3, product: "Keyboard", price: 50, quantity: 1 },
+//   { id: 4, product: "Monitor", price: 300, quantity: 1 },
+// ];
+
+// const fullPrice = orders.map(item=>{
+//   const fullprice = item.price*item.quantity
+//   return fullprice
+// }).reduce((acc,item)=>acc+item)
+// console.log(`Общая стоимость: ${fullPrice}`)
+
+// const newArr = orders.filter(item => item.price>100).map(el=>el.product)
+// console.log(`Дорогие продукты: ${newArr.join(', ')}`)
+
+
+
+// // Удалить дубликаты и преобразовать в массив уникальных тегов.
+// // Посчитать количество повторений каждого тега.
+
+// const tags = ["javascript", "react", "javascript", "node", "react", "vue"];
+
+// const del = tags.reduce((acc,item)=>{
+//  if(!acc.includes(item)){
+//   acc.push(item)
+//  }
+//  return acc
+// },[])
+// console.log(del) 
+
+// const countTags = tags.reduce((acc,item)=>{
+//   acc[item] = (acc[item] || 0)+1
+//   return acc
+// },{})
+// console.log(countTags) 
+
+
+// Рассчитать средний балл каждого студента.
+// Отсортировать студентов по среднему баллу (от большего к меньшему).
+// Найти студента с самым высоким средним баллом.
+// const students = [
+//   { name: "Alex", grades: [90, 85, 92] },
+//   { name: "Maria", grades: [78, 85, 80] },
+//   { name: "John", grades: [88, 91, 89] },
+// ];
+
+// const result = students.map((item)=>({
+//   name:item.name,
+//   newAverangeGrades:parseFloat(item.grades.reduce((acc,el)=>(acc+el),0)/item.grades.length).toFixed(1)
+// }))
+// const sortirovka = [...result].sort((a,b)=>a.newAverangeGrades-b.newAverangeGrades)
+// const bestStudent = [...result].reduce((top,e)=>parseFloat(e.newAverangeGrades)>parseFloat(top.newAverangeGrades)
+// ?e
+// :top
+// )
+// console.log(sortirovka) 
+// console.log(bestStudent) 
+
+
+// let sum = 0
+// for (let student of students){
+//   for(let grade of student.grades){
+//     sum+=grade
+//   }
+//   const avar = sum/student.grades.length
+//   console.log(`${student.name}: средний балл ${avar.toFixed(1)}`);
+// }
+
+
+// Найти категорию, в которой есть товар с id = 202.
+// Получить массив всех товаров дороже 500.
+// Посчитать общую стоимость всех товаров во всех категориях.
+
+// const categories = [
+//   {
+//     id: 1,
+//     name: "Electronics",
+//     products: [
+//       { id: 101, name: "Laptop", price: 1000 },
+//       { id: 102, name: "Phone", price: 800 },
+//     ],
+//   },
+//   {
+//     id: 2,
+//     name: "Clothing",
+//     products: [
+//       { id: 201, name: "T-Shirt", price: 20 },
+//       { id: 202, name: "Jeans", price: 50 },
+//     ],
+//   },
+// ];
+// const result = categories.filter(item=>item.products.some(el=>el.id===202))
+// const result2 = categories.map(categorie=>categorie.products.filter(item=>item.price>500)).flat()
+// const result3 = categories.map(categorie=>categorie.products.reduce((acc,price)=>acc+price.price,0))
+// const finaly = result3.reduce((acc,item)=>acc+item,0)
+// console.log(result) 
+// console.log(result2) 
+// console.log(finaly) 
+// const newResult = categories.flatMap(item=>item.products)
+// console.log(newResult) 
+
+
+
+// const categories = [
+//   {
+//     id: 1,
+//     name: "Electronics",
+//     products: [
+//       { id: 101, name: "Laptop", price: 1000 },
+//       { id: 102, name: "Phone", price: 800 },
+//     ],
+//   },
+//   {
+//     id: 2,
+//     name: "Clothing",
+//     products: [
+//       { id: 201, name: "T-Shirt", price: 20 },
+//       { id: 202, name: "Jeans", price: 50 },
+//     ],
+//   },
+// ];
+// const newResult = categories.flatMap(item=>item.products)
+// console.log(newResult)
+
+
+
+
+// Сгруппировать события по дате.
+const events = [
+  { id: 1, title: "Meeting", date: "2023-10-10", participants: ["Alice", "Bob"] },
+  { id: 2, title: "Conference", date: "2023-10-11", participants: ["Charlie", "David"] },
+  { id: 3, title: "Workshop", date: "2023-10-10", participants: ["Alice", "Eve"] },
+];
+
+// const result1 = events.reduce((acc,item)=>{
+//   const data = item.date
+//   if(!acc[data]){
+//     acc[data] = []
+//   }
+//   acc[data].push(item)
+//   return acc
+// },{})
+// console.log(result1)
+
+// const result2 = Object.groupBy(events,event=>event.date)
+// console.log(result2)
+
+
+
+// const result = events.reduce((acc,item)=>{
+//  const date = item.date
+//  if(!acc[date]){
+//   acc[date]=[]
+//  }
+//  item.participants.forEach(el=>{
+//   if(!acc[date].includes(el)){
+//     acc[date].push(el)
+//   }
+//  })
+//  return acc
+// },{})
+// console.log(result)
+
+// const result2 = Object.fromEntries(Object.entries(result).map(([date, participants]) => [date, participants.length]))
+// console.log(result2)
+
+
+const result = events.filter(item=>item.participants.includes('Alice')).map(el=>el.title)
+console.log(result)
 }
