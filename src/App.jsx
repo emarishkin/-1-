@@ -537,6 +537,112 @@ const events = [
 // console.log(result2)
 
 
-const result = events.filter(item=>item.participants.includes('Alice')).map(el=>el.title)
-console.log(result)
+// const result = events.filter(item=>item.participants.includes('Alice')).map(el=>el.title)
+// console.log(result)
+
+
+// Создание объекта
+// Создай объект user с полями: name (строка), age (число), isAdmin (булево).
+
+// const obj = new Object({
+//   name:'efwe',
+//   age:12,
+//   isAdmin:true
+// })
+// console.log(obj)
+
+
+
+
+// Выведи в консоль model и year этого объекта.
+// const car = { brand: "Toyota", model: "Camry", year: 2020 };
+// car.toplivo= 'дизель'
+// car['school']= 10
+// console.log(car.model,car.year,car.toplivo,car['school'])
+
+// const car = { brand: "Toyota", model: "Camry", year: 2020 };
+// const newKey = 'weigt'
+// car[newKey] = 2
+// console.log(car['weigt'])
+
+
+// Изменение свойств
+// У объекта car из предыдущей задачи измени year на 2022 и добавь новое свойство color со значением "black".
+// const car = { brand: "Toyota", model: "Camry", year: 2020 };
+// car.year=2022
+// car.color = 'black'
+
+
+
+// Методы объекта
+// Создай объект calculator с методами:
+// sum() – возвращает сумму двух чисел,
+// mul() – возвращает произведение двух чисел.
+
+// const calculator = {
+//   sum:(a,b)=>{
+//     return a+b
+//   },
+//   mul:(a,b)=>{
+//     return a*b
+//   }
+// }
+// console.log(calculator.sum(2,3))
+// console.log(calculator.mul(2,3))
+
+
+
+// Динамические ключи
+// Напиши функцию addKeyValue(obj, key, value), которая добавляет в объект obj новый ключ key со значением value.
+
+// function addKeyValue(obj, key, value){
+// return obj[key] = value
+// }
+// const obj = {}
+// console.log(addKeyValue(obj,'s',12))
+
+// function addKeyValue(obj,key,value){
+//   return {...obj,[key]:value}
+// }
+// console.log(addKeyValue({},'num',12))
+
+
+// // Проверка свойства
+// // Напиши функцию hasProperty(obj, prop), которая возвращает true, если свойство prop есть в объекте obj, и false – если нет.
+
+// const obj ={
+//   ww:12
+// }
+
+// function hasProperty(obj, prop){
+//   return prop in obj
+// }
+// console.log(hasProperty(obj,'ww'))
+
+
+// Методы и this
+// Создай объект person с полями name и age, а также методом introduce(), который выводит в консоль:
+// "Меня зовут [name], мне [age] лет."
+
+
+// const person = {
+//   name:'egor',
+//   age:12,
+//   introduce(){
+//     console.log(`меня зовут ${this.name}, мне ${this.age} лет`)
+//   }
+// }
+// person.introduce()
+
+const fruits = { apple: 5, banana: 3, orange: 8 };
+
+// Object.keys(fruits).forEach(item=>{
+//   console.log({[item]:fruits[item]})
+// })
+
+Object.keys(fruits).map(item=>{
+  console.log(`'${item}: ${fruits[item]}'`)
+})
+
+
 }
