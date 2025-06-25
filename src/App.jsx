@@ -679,6 +679,81 @@ export default function App(){
 // )
 // )
 
+// let schedule = {name:'efwf'};
+// function isEmpty(obj){
+//   for (let key in obj){
+//     return false
+//   }
+//   return true
+// }
+// alert( isEmpty(schedule) )
+
+// let salaries = {
+//   John: 100,
+//   Ann: 160,
+//   Pete: 130
+// }
+
+// let sum = 0
+// for (let key in salaries){
+//   sum+=salaries[key]
+// }
+// alert(sum )
 
 
-}
+// let menu = {
+//   width: 200,
+//   height: 300,
+//   title: "My menu"
+// };
+
+// let sum = 0
+// for(let key in menu){
+//   if(typeof menu[key]=='number'){
+//     sum+=menu[key]
+//   }
+// }
+// alert(sum )
+
+// let menu = {
+//   width: 200,
+//   height: 300,
+//   title: "My menu"
+// };
+// let salaries = {
+// John: 100,
+// Ann: 160,
+// Pete: 130
+// }
+// const result = Object.assign(menu,salaries)
+// console.log(result)
+// console.log(salaries)
+
+// }
+
+
+
+// let calculator = {
+  
+//   read(){
+//      this.a = Number(prompt('ввод 1 числа',''))
+//      this.b = Number(prompt('ввод 2 числа',''))
+//   },
+//   sum(){
+//     return this.a+this.b
+//   },
+//   mul(){
+//     return this.a*this.b
+//   }
+// };
+
+// calculator.read()
+// alert( calculator.sum() )
+// alert( calculator.mul() )
+
+
+
+
+
+
+}  
