@@ -752,8 +752,47 @@ export default function App(){
 // alert( calculator.mul() )
 
 
+// const obj = {
+//   name: 'Test',
+//   greet() {
+//     console.log(`Hello, ${this.name}`);
+//   }
+// };
+// obj.greet();
+
+
+// function BigUser() {
+
+//   this.name = "John";
+//   return this.name
+
+// }
+// alert( new BigUser().name ); 
+
+
+// function A(name) {
+// this.name = name
+// }
+// function B(name) {
+//   this.name = name
+// }
+// let a = new A('igor');
+// let b = new B('igor');
+// console.log(a.name==b.name)
 
 
 
-
+function Calculator(a,b){
+  this.a = a
+  this.b = b
+  this.sum = function(){
+    return this.a+this.b
+  }
+  this.mul = function(){
+    return this.a*this.b
+  }
+}
+let res = new Calculator(6,6)
+console.log(res.sum())
+console.log(res.mul())
 }  
