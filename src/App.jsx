@@ -498,11 +498,11 @@ export default function App(){
 
 
 // Сгруппировать события по дате.
-const events = [
-  { id: 1, title: "Meeting", date: "2023-10-10", participants: ["Alice", "Bob"] },
-  { id: 2, title: "Conference", date: "2023-10-11", participants: ["Charlie", "David"] },
-  { id: 3, title: "Workshop", date: "2023-10-10", participants: ["Alice", "Eve"] },
-];
+// const events = [
+//   { id: 1, title: "Meeting", date: "2023-10-10", participants: ["Alice", "Bob"] },
+//   { id: 2, title: "Conference", date: "2023-10-11", participants: ["Charlie", "David"] },
+//   { id: 3, title: "Workshop", date: "2023-10-10", participants: ["Alice", "Eve"] },
+// ];
 
 // const result1 = events.reduce((acc,item)=>{
 //   const data = item.date
@@ -634,15 +634,51 @@ const events = [
 // }
 // person.introduce()
 
-const fruits = { apple: 5, banana: 3, orange: 8 };
+// const fruits = { apple: 5, banana: 3, orange: 8 };
 
-// Object.keys(fruits).forEach(item=>{
-//   console.log({[item]:fruits[item]})
+// // Object.keys(fruits).forEach(item=>{
+// //   console.log({[item]:fruits[item]})
+// // })
+
+// Object.keys(fruits).map(item=>{
+//   console.log(`'${item}: ${fruits[item]}'`)
 // })
 
-Object.keys(fruits).map(item=>{
-  console.log(`'${item}: ${fruits[item]}'`)
-})
+
+// function checkAge(age) {
+//   age > 18?  true: confirm('Родители разрешили?');
+   
+// }
+// console.log(checkAge(12))
+
+
+// function minCalc(a,b){
+//   const num = Math.min(a,b)
+//   return num
+// }
+// console.log(minCalc(-1,4))
+
+
+// function stepen(){
+//   const x = prompt('введите число','')
+//   const n = prompt('введите степень','')
+//   const res = x**n
+//   return res
+// }
+// console.log(stepen())
+
+// const ask = (question, yes, no) => {
+//   if (confirm(question)) yes()
+//    else no()
+// }
+// console.log(
+//   ask(
+//   "Вы согласны?",
+//   function() { alert("Вы согласились."); },
+//   function() { alert("Вы отменили выполнение."); }
+// )
+// )
+
 
 
 }
