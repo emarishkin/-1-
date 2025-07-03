@@ -782,17 +782,86 @@ export default function App(){
 
 
 
-function Calculator(a,b){
-  this.a = a
-  this.b = b
-  this.sum = function(){
-    return this.a+this.b
-  }
-  this.mul = function(){
-    return this.a*this.b
-  }
+// function Calculator(a,b){
+//   this.a = a
+//   this.b = b
+//   this.sum = function(){
+//     return this.a+this.b
+//   }
+//   this.mul = function(){
+//     return this.a*this.b
+//   }
+// }
+// let res = new Calculator(6,6)
+// console.log(res.sum())
+// console.log(res.mul())
+
+
+// const  animal = {
+//     name:'animal',
+//     age:5,
+//     hasTail:true
+// }
+class Animal {
+    constructor(prop){
+      this.name=prop.name
+      this.age=prop.age
+      this.finalOld=prop.finalOld
+      this.hasTail=prop.hasTail
+    }
+    sum() {
+        return this.finalOld-this.age
+    }
+ 
 }
-let res = new Calculator(6,6)
-console.log(res.sum())
-console.log(res.mul())
+
+class Dog extends Animal{
+  constructor(prop){
+    super(prop)
+    this.color=prop.color
+  }
+
+  get updateAge(){
+    return this.age * 5
+  }
+
+  set updateAge(newAge){
+    this.age=newAge
+  }
+
+}
+
+const dog =new Dog({
+    name:'qwerty',
+    age:21,
+    hasTail:false,
+    color:'white',
+    finalOld:60
+})
+
+
+console.log(dog.updateAge=15)
+console.log(dog.updateAge)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }  
