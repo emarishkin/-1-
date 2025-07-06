@@ -802,60 +802,275 @@ export default function App(){
 //     age:5,
 //     hasTail:true
 // }
-class Animal {
-    constructor(prop){
-      this.name=prop.name
-      this.age=prop.age
-      this.finalOld=prop.finalOld
-      this.hasTail=prop.hasTail
-    }
-    sum() {
-        return this.finalOld-this.age
-    }
+// class Animal {
+//     constructor(prop){
+//       this.name=prop.name
+//       this.age=prop.age
+//       this.finalOld=prop.finalOld
+//       this.hasTail=prop.hasTail
+//     }
+//     sum() {
+//         return this.finalOld-this.age
+//     }
  
+// }
+
+// class Dog extends Animal{
+//   constructor(prop){
+//     super(prop)
+//     this.color=prop.color
+//   }
+
+//   get updateAge(){
+//     return this.age * 5
+//   }
+
+//   set updateAge(newAge){
+//     this.age=newAge
+//   }
+
+// }
+
+// const dog =new Dog({
+//     name:'qwerty',
+//     age:21,
+//     hasTail:false,
+//     color:'white',
+//     finalOld:60
+// })
+
+
+// console.log(dog.updateAge=15)
+// console.log(dog.updateAge)
+
+// //1
+// class Rectangle {
+//     constructor(width,height){
+//         this.width = width
+//         this.height = height
+//     }
+    
+//      area(){
+//         return console.log(`Площадь прямоугольника равна ${this.width*this.height}`)
+//     }
+//     perimeter(){
+//         return console.log(`Периметр прямоугольника равен ${(this.width*2)+(this.height*2)}`)
+//     }
+
+// }
+// const result = new Rectangle(10,20)
+// result.area()
+
+// //2
+// class User {
+//     constructor(name){
+//         this.name = name
+//     }
+//     sayHello(){
+//         return console.log(`Привет ${this.name}`)
+//     }
+// } 
+// const user = new User("Маша");
+// user.sayHello()
+
+// //3
+// class Counter {
+//     constructor(){
+//         this.count = 0
+//     }
+//     increment(){
+//       return this.count++
+//     }
+//     reset(){
+//       return this.count = 0
+//     }
+// }
+// const counter = new Counter();
+// console.log(counter.increment())
+// console.log(counter.increment())
+// console.log(counter.increment())
+// console.log(counter.increment())
+// console.log(counter.reset())
+
+
+// //Уровень 2
+// //Задание 1
+
+// class Animal {
+//     constructor(name){
+//       this.name = name
+//     }
+//     makeSound(){
+//         console.log("Животное издаёт звук")
+//     }
+// }
+// class Dog extends Animal {
+//     makeSound(){
+//         console.log("Собака лает")
+//     }
+//     fetch(){
+//         console.log("Собака приносит палку")
+//     }
+// }
+// const dog = new Dog("Шарик");
+// console.log(dog.name)
+// dog.makeSound(); 
+// dog.fetch();  
+
+// //Задание 2
+
+// class Product {
+//     constructor(name,price){
+//         this.name = name
+//         this.price = price
+//     }
+//     get priceWithTax(){
+//         return this.price*1.2
+//     }
+//     set Price(value){
+//        if(value>0){
+//         return this.price
+//        } 
+//        return null
+//     }
+// }
+// const p = new Product("Телефон", 1000);
+// console.log(p.priceWithTax); // 1200
+// p.value = -100; // игнорируется
+// console.log(p.price); // 1000
+
+
+// class Person {
+//     constructor(name,age){
+//         this.name = name
+//         this._age = age
+//     }
+//     get age(){
+//         return this._age
+//     }
+//     set age(value){
+//       if(value>0){
+//         return this._age=value
+//       }
+//     }
+// }
+// const p = new Person("Аня", 25)
+// console.log(p.age);
+// p.age = 27
+// console.log(p.age);
+
+
+
+// class BankAccount {
+//     constructor(name,balance){
+//       this.name = name
+//       this._balance = balance
+//     }
+//     get balance(){
+//         return this._balance
+//     }
+//     set balance(value){
+//         if(value>0){
+//             this._balance=value
+//         }
+//     }
+//     deposit(amount){
+//         if(amount>0){
+//             this._balance+=amount
+//         }
+//     }
+//     withdraw(amount){
+//         if(amount>=this._balance){
+//             console.log('не хватает средств')
+//         } else {
+//             this._balance-=amount
+//         }
+//     }
+// }
+// const acc = new BankAccount("Игорь", 1000);
+// console.log(acc.balance); 
+
+// acc.deposit(500);
+// console.log(acc.balance);
+
+// acc.withdraw(250); 
+// console.log(acc.balance); 
+
+
+
+// class TemperatureConverter {
+//     static toCelsius(fahrenheit){
+//         return (fahrenheit-32) * 5/9
+//     }
+//      static toFahrenheit(celsius){
+//         return (celsius * 9/5) +32
+//     }
+// }
+// console.log(TemperatureConverter.toCelsius(212));   
+// console.log(TemperatureConverter.toFahrenheit(0)); 
+
+
+// class User {
+//     static instanceCount = 0;
+
+//     constructor(name){
+//       this.name = name
+//       this.constructor.instanceCount++
+//     }
+//     static getInstanceCount() {
+//       return this.instanceCount
+//     }
+// }
+// const u1 = new User("Аня");
+// const u2 = new User("Макс");
+
+// console.log(User.getInstanceCount())
+
+
+// class User {
+//     static instanceCount = 0
+//     constructor(name){
+//         this.name = name
+//         User.instanceCount++
+//     }
+//     static getInstanceCount(){
+//         return this.instanceCount
+//     }
+// }
+// class Admin extends User {
+//     static instanceCount = 0
+//     constructor(name){
+//         super(name)
+//         Admin.instanceCount++
+//     }
+//     static getInstanceCount(){
+//         return this.instanceCount
+//     }
+// }
+
+
+// const u1 = new User("Маша");
+// const u2 = new User("Игорь");
+
+// const a1 = new Admin("Антон");
+// const a2 = new Admin("Оля");
+
+// console.log(User.getInstanceCount());  
+// console.log(Admin.getInstanceCount()); 
+
+
+
+class Vehicle {
+    move() {
+        console.log("Транспорт движется");
+    }
 }
-
-class Dog extends Animal{
-  constructor(prop){
-    super(prop)
-    this.color=prop.color
-  }
-
-  get updateAge(){
-    return this.age * 5
-  }
-
-  set updateAge(newAge){
-    this.age=newAge
-  }
-
+class Car extends Vehicle {
+    move() {
+        super.move()
+        console.log("Машина едет");
+    }
 }
-
-const dog =new Dog({
-    name:'qwerty',
-    age:21,
-    hasTail:false,
-    color:'white',
-    finalOld:60
-})
-
-
-console.log(dog.updateAge=15)
-console.log(dog.updateAge)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
