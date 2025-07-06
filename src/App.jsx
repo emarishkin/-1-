@@ -1104,34 +1104,179 @@ export default function App(){
 //     console.log("Прошло 3 секунды")
 // })
 
-const obj = {
-    name: "Илья",
-    age: 281,
-    city: "Самара" 
-}
-function fetchUserData(){
-    return new Promise((resolve)=>{
+// const obj = {
+//     name: "Илья",
+//     age: 281,
+//     city: "Самара" 
+// }
+// function fetchUserData(){
+//     return new Promise((resolve)=>{
+//         setTimeout(()=>{
+//           resolve(obj)
+//         },3000)
+//     })
+// }
+// async function showUser() {
+//     console.log('Загружаю даннные с сервера')
+//     try{
+//        const user = await fetchUserData()
+//        console.log('Данные получены')
+//        console.log(`Имя: ${user.name}`);
+//        console.log(`Возраст: ${user.age}`);
+//        console.log(`Город: ${user.city}`); 
+//     } catch {
+//        console.log('Ошибка при получении данных:', error);
+//     }
+// }
+// showUser()
+
+
+
+
+// class Book {
+//     constructor(title,author,year){
+//         this.title = title
+//         this.author = author
+//         this.year = year
+//     }
+//     getSummary() {
+//         console.log(`Книга ${this.title} (${this.year}), автор: ${this.author}`)
+//     }
+// }
+// const b = new Book("1984", "Оруэлл", 1949);
+// b.getSummary()
+
+
+
+// class User {
+//     constructor(name){
+//         this.name = name
+//     }
+//     sayHi(){
+//         console.log(`Привет, я ${this.name}`)
+//     }
+// }
+// class Admin extends User {
+//     constructor(name,role){
+//         super(name)
+//         this.role = role
+//     }
+//     sayRole(){
+//         console.log(`Я администратор: ${this.role}`)
+//     }
+// }
+// const a = new Admin("Аня", "Модератор");
+// a.sayHi()
+// a.sayRole()
+
+
+
+// class Circle {
+//     constructor(radius){
+//         this.radius = radius
+//     }
+//     get diameter(){
+//         return this.radius*2
+//     }
+//     set diameter(value){
+//         this.radius = value/2
+//     }
+// }
+// const c = new Circle(5);
+// console.log(c.diameter)
+// c.diameter = 50
+// console.log(c.radius)
+
+
+
+// const arr = [
+//     {
+//         name:'egor',
+//         price:200
+//     },
+//     {
+//         name:'igor',
+//         price:100
+//     },
+//     {
+//         name:'misha',
+//         price:30
+//     },
+//     {
+//         name:'Ann',
+//         price:20
+//     },
+// ]
+
+// function fetchProducts(){
+//     return new Promise((resolve)=>{
+//         setTimeout(()=>{
+//             resolve([...arr])
+//         },5000)
+//     })
+// }
+
+// async function showProducts(){
+//     console.log('Загружаю даннные с сервера')
+//     try{
+//       const res = await fetchProducts()
+//       res.map(el=>{
+//         console.log(el.name)
+//         console.log(el.price)
+//         console.log('-----')
+//     })
+//     } catch (error) {
+//         console.log('Ошибка:', error);
+//     } 
+// }
+// showProducts()
+
+
+
+
+const arr = [
+    {
+        name:'egor',
+        price:200
+    },
+    {
+        name:'igor',
+        price:100
+    },
+    {
+        name:'misha',
+        price:30
+    },
+    {
+        name:'Ann',
+        price:20
+    },
+]
+function fetchProducts(){
+    return new Promise((resolve,reject)=>{
         setTimeout(()=>{
-          resolve(obj)
+          if(Math.random()<0.3){
+            reject('ошибка')
+          } else {
+            resolve([...arr])
+          }
         },3000)
     })
 }
-async function showUser() {
-    console.log('Загружаю даннные с сервера')
-    try{
-       const user = await fetchUserData()
-       console.log('Данные получены')
-       console.log(`Имя: ${user.name}`);
-       console.log(`Возраст: ${user.age}`);
-       console.log(`Город: ${user.city}`); 
-    } catch {
-       console.log('Ошибка при получении данных:', error);
+async function showProducts() {
+    console.log('Загружаю данные с сервера...');
+
+    try {
+        const res = await fetchProducts();
+        res.forEach(el => {
+            console.log(`Имя: ${el.name}`);
+            console.log(`Цена: ${el.price}`);
+            console.log('-----');
+        });
+    } catch (error) {
+        console.log('❌ Ошибка при загрузке:', error);
     }
 }
-showUser()
-
-
-
-
+showProducts()
 
 }  
