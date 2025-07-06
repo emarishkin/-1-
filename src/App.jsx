@@ -1060,20 +1060,75 @@ export default function App(){
 
 
 
-class Vehicle {
-    move() {
-        console.log("Транспорт движется");
+// class Vehicle {
+//     move() {
+//         console.log("Транспорт движется");
+//     }
+// }
+// class Car extends Vehicle {
+//     move() {
+//         super.move()
+//         console.log("Машина едет");
+//     }
+// }
+
+
+
+// function delay(ms){
+//     return new Promise((resolve,reject)=>{
+//       setTimeout(()=>{
+//         resolve()
+//       },2000)
+//     })
+// }
+// delay(2000).then(() => console.log("Прошло 2 секунды"));
+
+
+// function delay(ms){
+//     return new Promise((resolve,reject)=>{
+//         setTimeout(()=>{
+//           resolve()
+//         },ms)
+//     })
+// }
+// delay(1000)
+// .then(() => {
+//     console.log("Прошла 1 секунда")
+//     return delay(2000)
+// })
+// .then(()=>{
+//     console.log("Прошло 2 секунды")
+//     return delay(3000)
+// })
+// .then(()=>{
+//     console.log("Прошло 3 секунды")
+// })
+
+const obj = {
+    name: "Илья",
+    age: 281,
+    city: "Самара" 
+}
+function fetchUserData(){
+    return new Promise((resolve)=>{
+        setTimeout(()=>{
+          resolve(obj)
+        },3000)
+    })
+}
+async function showUser() {
+    console.log('Загружаю даннные с сервера')
+    try{
+       const user = await fetchUserData()
+       console.log('Данные получены')
+       console.log(`Имя: ${user.name}`);
+       console.log(`Возраст: ${user.age}`);
+       console.log(`Город: ${user.city}`); 
+    } catch {
+       console.log('Ошибка при получении данных:', error);
     }
 }
-class Car extends Vehicle {
-    move() {
-        super.move()
-        console.log("Машина едет");
-    }
-}
-
-
-
+showUser()
 
 
 
