@@ -1234,49 +1234,82 @@ export default function App(){
 
 
 
-const arr = [
-    {
-        name:'egor',
-        price:200
-    },
-    {
-        name:'igor',
-        price:100
-    },
-    {
-        name:'misha',
-        price:30
-    },
-    {
-        name:'Ann',
-        price:20
-    },
-]
-function fetchProducts(){
-    return new Promise((resolve,reject)=>{
-        setTimeout(()=>{
-          if(Math.random()<0.3){
-            reject('ошибка')
-          } else {
-            resolve([...arr])
-          }
-        },3000)
-    })
-}
-async function showProducts() {
-    console.log('Загружаю данные с сервера...');
+// const arr = [
+//     {
+//         name:'egor',
+//         price:200
+//     },
+//     {
+//         name:'igor',
+//         price:100
+//     },
+//     {
+//         name:'misha',
+//         price:30
+//     },
+//     {
+//         name:'Ann',
+//         price:20
+//     },
+// ]
+// function fetchProducts(){
+//     return new Promise((resolve,reject)=>{
+//         setTimeout(()=>{
+//           if(Math.random()<0.3){
+//             reject('ошибка')
+//           } else {
+//             resolve([...arr])
+//           }
+//         },3000)
+//     })
+// }
+// async function showProducts() {
+//     console.log('Загружаю данные с сервера...');
 
+//     try {
+//         const res = await fetchProducts();
+//         res.forEach(el => {
+//             console.log(`Имя: ${el.name}`);
+//             console.log(`Цена: ${el.price}`);
+//             console.log('-----');
+//         });
+//     } catch (error) {
+//         console.log('❌ Ошибка при загрузке:', error);
+//     }
+// }
+// showProducts()
+
+async function loadPosts(){
     try {
-        const res = await fetchProducts();
-        res.forEach(el => {
-            console.log(`Имя: ${el.name}`);
-            console.log(`Цена: ${el.price}`);
-            console.log('-----');
-        });
+        console.log('Загрузка постов...')
+
+        const response = await fetch('https://dummyjson.com/posts')
+        if (!response.ok) throw new Error('Ошибка при загрузке данных')
+
+        const data = await response.json()
+
+        console.log(`Получено ${data.length} постов.`)
+        data.slice(0,5).map((item,index)=>{
+            console.log(`${index + 1}. ${item.title}`);
+        })
+
     } catch (error) {
-        console.log('❌ Ошибка при загрузке:', error);
+        console.log("❌ Ошибка:", error.message);
     }
 }
-showProducts()
+loadPosts()
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 }  
